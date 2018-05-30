@@ -1,12 +1,4 @@
-const firebase = require("firebase");
-// Required for side-effects
-require("firebase/firestore");
 
-document.addEventListener("DOMContentLoaded", event => {
-
-    const app = firebase.app();
-
-});
 
 // Initialize Firebase
 var config = {
@@ -18,3 +10,23 @@ var config = {
     messagingSenderId: "562305102808"
 };
 firebase.initializeApp(config);
+
+var firestore = firebase.firestore();
+
+const projectDB = firestore.doc("project/UPlZctqdHYWDNDrMFFmp");
+const projectList = document.querySelector("#projectList");
+const projectInput = document.querySelector("#projectInput");
+const saveProject = document.querySelector("#saveProject");
+
+
+saveProject.addEventListener("click", function() {
+    const savedProject = inputTextField.value;
+    console.log("Project turned in: ", savedProject);
+    projectDB.set({
+        projectInput: savedProject
+    }).then(function() {
+        console.log("Project Saved")
+    }).catch(function (error) {
+        console.log("error: ", error);
+    });
+});

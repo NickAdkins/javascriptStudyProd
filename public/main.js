@@ -14,14 +14,14 @@ if (!firebase.apps.length) {
 }
 var firestore = firebase.firestore();
 
-const projectDB = firestore.doc("project/UPlZctqdHYWDNDrMFFmp");
+const projectDB = firestore.collection("project");
 const projectList = document.querySelector("#projectList");
 const projectInput = document.querySelector("#projectInput");
 const saveProject = document.querySelector("#saveProject");
 
 
 saveProject.addEventListener("click", function() {
-    const savedProject = inputTextField.value;
+    const savedProject = projectInput.value;
     console.log("Project turned in: ", savedProject);
     projectDB.set({
         projectInput: savedProject

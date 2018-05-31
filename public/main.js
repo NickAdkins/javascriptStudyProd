@@ -9,8 +9,9 @@ var config = {
     storageBucket: "javascriptstudyprod.appspot.com",
     messagingSenderId: "562305102808"
 };
-firebase.initializeApp(config);
-
+if (!firebase.apps.length) {
+    firebase.initializeApp(config);
+}
 var firestore = firebase.firestore();
 
 const projectDB = firestore.doc("project/UPlZctqdHYWDNDrMFFmp");

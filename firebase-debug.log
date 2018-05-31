@@ -1,32 +1,41 @@
-[debug] [2018-05-30T20:36:43.317Z] ----------------------------------------------------------------------
-[debug] [2018-05-30T20:36:43.320Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] [2018-05-30T20:36:43.320Z] CLI Version:   3.18.5
-[debug] [2018-05-30T20:36:43.320Z] Platform:      darwin
-[debug] [2018-05-30T20:36:43.320Z] Node Version:  v8.11.2
-[debug] [2018-05-30T20:36:43.326Z] Time:          Wed May 30 2018 14:36:43 GMT-0600 (MDT)
-[debug] [2018-05-30T20:36:43.326Z] ----------------------------------------------------------------------
+[debug] [2018-05-31T15:43:25.206Z] ----------------------------------------------------------------------
+[debug] [2018-05-31T15:43:25.208Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-05-31T15:43:25.208Z] CLI Version:   3.18.5
+[debug] [2018-05-31T15:43:25.208Z] Platform:      darwin
+[debug] [2018-05-31T15:43:25.208Z] Node Version:  v8.11.2
+[debug] [2018-05-31T15:43:25.209Z] Time:          Thu May 31 2018 09:43:25 GMT-0600 (MDT)
+[debug] [2018-05-31T15:43:25.209Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-05-30T20:36:43.338Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-05-30T20:36:43.339Z] > authorizing via signed-in user
-[debug] [2018-05-30T20:36:43.341Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/javascriptstudyprod  
+[debug] [2018-05-31T15:43:25.236Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-31T15:43:25.237Z] > authorizing via signed-in user
+[debug] [2018-05-31T15:43:25.239Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-31T15:43:25.239Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/X_3VERdB5C3PX5LKVQAvSKJ9DfVpqE21-36XEmJsByQ',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu May 31 2018 09:43:25 GMT-0600 (MDT)
+[debug] [2018-05-31T15:43:25.641Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-31T15:43:25.652Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/javascriptstudyprod  
   
- Wed May 30 2018 14:36:43 GMT-0600 (MDT)
-[debug] [2018-05-30T20:36:43.844Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-30T20:36:43.845Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/javascriptstudyprod/tokens  
+ Thu May 31 2018 09:43:25 GMT-0600 (MDT)
+[debug] [2018-05-31T15:43:26.309Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-31T15:43:26.312Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/javascriptstudyprod/tokens  
   
- Wed May 30 2018 14:36:43 GMT-0600 (MDT)
-[debug] [2018-05-30T20:36:44.278Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-30T20:36:44.278Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/javascriptstudyprod  
+ Thu May 31 2018 09:43:26 GMT-0600 (MDT)
+[debug] [2018-05-31T15:43:26.752Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-31T15:43:26.754Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/javascriptstudyprod  
   
- Wed May 30 2018 14:36:44 GMT-0600 (MDT)
-[debug] [2018-05-30T20:36:44.741Z] <<< HTTP RESPONSE 200
+ Thu May 31 2018 09:43:26 GMT-0600 (MDT)
+[debug] [2018-05-31T15:43:27.295Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/nadkins/Documents/javascriptStudyProd/javascriptStudyProd'...
 [info] 
-[debug] [2018-05-30T20:36:44.742Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/562305102808/clients/_:getWebAppConfig  
+[debug] [2018-05-31T15:43:27.299Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/562305102808/clients/_:getWebAppConfig  
   
- Wed May 30 2018 14:36:44 GMT-0600 (MDT)
-[debug] [2018-05-30T20:36:45.473Z] <<< HTTP RESPONSE 200
+ Thu May 31 2018 09:43:27 GMT-0600 (MDT)
+[debug] [2018-05-31T15:43:27.901Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
 

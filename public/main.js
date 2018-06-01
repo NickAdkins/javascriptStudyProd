@@ -28,4 +28,15 @@ saveProject.addEventListener("click", function() {
     }).catch(function(error) {
         console.error("Error adding:", error)
     })
+    projectDB.get().then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+            console.log(doc.id, " => ", doc.data());
+        });
+    });
 });
+
+// projectDB.collection("project").get().then(function(querySnapshot){
+//     querySnapshot.forEach(function(doc) {
+//         console.log(doc.id, " => ", doc.data());
+//     });
+// });

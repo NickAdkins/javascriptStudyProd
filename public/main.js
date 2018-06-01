@@ -16,18 +16,16 @@ var firestore = firebase.firestore();
 
 const projectDB = firestore.collection("project");
 const projectList = document.querySelector("#projectList");
-const projectInput = document.querySelector("#projectInput");
+const projectName = document.querySelector("#projectName");
 const saveProject = document.querySelector("#saveProject");
 
 
 saveProject.addEventListener("click", function() {
-    const savedProject = projectInput.value;
+    const savedProject = projectName.value;
     console.log("Project turned in: ", savedProject);
-    projectDB.set({
-        projectInput: savedProject
-    }).then(function() {
-        console.log("Project Saved")
-    }).catch(function (error) {
-        console.log("error: ", error);
-    });
+    projectDB.add({
+        projectName: savedProject
+    }).catch(function(error) {
+        console.error("Error adding:", error)
+    })
 });

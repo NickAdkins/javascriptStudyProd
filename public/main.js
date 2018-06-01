@@ -18,6 +18,7 @@ const projectDB = firestore.collection("project");
 const projectList = document.querySelector("#projectList");
 const projectName = document.querySelector("#projectName");
 const saveProject = document.querySelector("#saveProject");
+const loadProject = document.querySelector("#loadProject");
 
 
 saveProject.addEventListener("click", function() {
@@ -28,15 +29,33 @@ saveProject.addEventListener("click", function() {
     }).catch(function(error) {
         console.error("Error adding:", error)
     })
-    projectDB.get().then(function (querySnapshot) {
-        querySnapshot.forEach(function (doc) {
-            console.log(doc.id, " => ", doc.data());
-        });
-    });
+
 });
 
-// projectDB.collection("project").get().then(function(querySnapshot){
-//     querySnapshot.forEach(function(doc) {
-//         console.log(doc.id, " => ", doc.data());
+loadProject.addEventListener("click", function(){
+    projectDB.get().then(function (doc) {
+        if (doc && doc.exists) {
+            const myData = doc.data();
+            projectList.innerText = myData.projectName;
+        }
+    }).catch(function (error) {
+        console.error("Error loading:", error)
+    })
+})
+
+
+
+
+
+// projectDB.where("project", ">", 0).onSnapshot(function (querySnapshot) {
+//     var projects = [];
+//     querySnapshot.forEach(function (doc) {
+//         projects.push(doc.data().projectName);
 //     });
+//     console.log("All Projects: ", projects.join(", "));
+    
 // });
+
+
+
+

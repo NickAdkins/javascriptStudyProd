@@ -33,16 +33,36 @@ saveProject.addEventListener("click", function() {
 });
 
 loadProject.addEventListener("click", function(){
-    projectDB.get().then(function (doc) {
+    projectDB.doc("DxWRXmUzqt7lcNor2J4x").get().then(function (doc) {
         if (doc && doc.exists) {
             const myData = doc.data();
-            projectList.innerText = myData.projectName;
+            projectList.innerText = "Project list: " + myData.projectName;
         }
     }).catch(function (error) {
         console.error("Error loading:", error)
-    })
-})
+    });
+});
 
+// realTimeList = function() {
+//     projectDB.doc("7FWw2tjET9C0hlEKXLwV").onSnapshot(function (doc) {
+//         if (doc && doc.exists) {
+//             const myData = doc.data();
+//             projectList.innerText = "Project list: " + myData.projectName;
+//         }
+//     });
+//     }
+
+realTimeList = function() {
+    projectDB.get().then(function(querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+            console.log(doc.id, " ", doc.data());
+        });
+    }).catch(function(error) {
+        console.log("error: ", error);
+    });
+}
+
+    realTimeList();
 
 
 

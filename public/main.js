@@ -64,6 +64,19 @@ realTimeList = function() {
     });
 }
 
+// realTimeList = function () {
+//     projectDB.get().then(function (querySnapshot) {
+//         querySnapshot.forEach(function (doc) {
+//             console.log(doc.id, " ", doc.data());
+//             var data = querySnapshot.docs.map(function (doc) {
+//                 projectList.innerHTML = JSON.stringify(doc.data());
+//             });
+//         });
+//     }).catch(function (error) {
+//         console.log("error: ", error);
+//     });
+// }
+
     realTimeList();
 
 

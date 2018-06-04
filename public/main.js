@@ -52,30 +52,33 @@ loadProject.addEventListener("click", function(){
 //     });
 //     }
 
-realTimeList = function() {
-    projectDB.get().then(function(querySnapshot) {
-        querySnapshot.forEach(function (doc) {
-            console.log(doc.id, " ", doc.data());
-            const myData = doc.data();
-            projectList.innerText = "Project list: " + JSON.stringify(myData);
-        });
-    }).catch(function(error) {
-        console.log("error: ", error);
-    });
-}
-
-// realTimeList = function () {
-//     projectDB.get().then(function (querySnapshot) {
+// realTimeList = function() {
+//     projectDB.get().then(function(querySnapshot) {
 //         querySnapshot.forEach(function (doc) {
 //             console.log(doc.id, " ", doc.data());
-//             var data = querySnapshot.docs.map(function (doc) {
-//                 projectList.innerHTML = JSON.stringify(doc.data());
-//             });
+//                 if (doc && doc.exists) {
+//                     const myData = doc.data();
+//                     projectList.innerText = "Project list: " + JSON.stringify(myData.projectName);
+//                 }else{
+//                     projectList.innerText = "No Projects"
+//                 }
 //         });
-//     }).catch(function (error) {
+//     }).catch(function(error) {
 //         console.log("error: ", error);
 //     });
 // }
+
+realTimeList = function () {
+    projectDB.get().then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+            console.log(doc.id, " ", doc.data());
+            const myData = doc.data();
+            projectList.innerText = "Project list: " + JSON.stringify(myData.projectName) + " " + JSON.stringify(doc.id);
+        });
+    }).catch(function (error) {
+        console.log("error: ", error);
+    });
+}
 
     realTimeList();
 

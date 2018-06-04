@@ -56,6 +56,8 @@ realTimeList = function() {
     projectDB.get().then(function(querySnapshot) {
         querySnapshot.forEach(function (doc) {
             console.log(doc.id, " ", doc.data());
+            const myData = doc.data();
+            projectList.innerText = "Project list: " + JSON.stringify(myData);
         });
     }).catch(function(error) {
         console.log("error: ", error);

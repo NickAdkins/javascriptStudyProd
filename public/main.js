@@ -51,7 +51,7 @@ realTimeList = function () {
             const list = document.createElement("LI");
             const newProject = document.createTextNode(JSON.stringify(myData.projectName));
             list.appendChild(newProject);
-            projectList.appendChild(list);
+            projectList.appendChild(list).classList.add("card", "card-body");
         });
     }).catch(function (error) {
         console.log("error: ", error);

@@ -43,6 +43,25 @@ loadProject.addEventListener("click", function(){
     });
 });
 
+realTimeList = function () {
+    projectDB.get().then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+            console.log(doc.id, " ", doc.data());
+            const myData = doc.data();
+            const list = document.createElement("LI");
+            const newProject = document.createTextNode(JSON.stringify(myData.projectName));
+            list.appendChild(newProject);
+            projectList.appendChild(list);
+        });
+    }).catch(function (error) {
+        console.log("error: ", error);
+    });
+}
+
+    realTimeList();
+
+
+
 // realTimeList = function() {
 //     projectDB.doc("7FWw2tjET9C0hlEKXLwV").onSnapshot(function (doc) {
 //         if (doc && doc.exists) {
@@ -67,23 +86,6 @@ loadProject.addEventListener("click", function(){
 //         console.log("error: ", error);
 //     });
 // }
-
-realTimeList = function () {
-    projectDB.get().then(function (querySnapshot) {
-        querySnapshot.forEach(function (doc) {
-            console.log(doc.id, " ", doc.data());
-            const myData = doc.data();
-            projectList.innerText = "Project list: " + JSON.stringify(myData.projectName) + " " + JSON.stringify(doc.id);
-        });
-    }).catch(function (error) {
-        console.log("error: ", error);
-    });
-}
-
-    realTimeList();
-
-
-
 
 // projectDB.where("project", ">", 0).onSnapshot(function (querySnapshot) {
 //     var projects = [];

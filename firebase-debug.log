@@ -1,123 +1,41 @@
-[debug] [2018-05-31T15:43:25.206Z] ----------------------------------------------------------------------
-[debug] [2018-05-31T15:43:25.208Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] [2018-05-31T15:43:25.208Z] CLI Version:   3.18.5
-[debug] [2018-05-31T15:43:25.208Z] Platform:      darwin
-[debug] [2018-05-31T15:43:25.208Z] Node Version:  v8.11.2
-[debug] [2018-05-31T15:43:25.209Z] Time:          Thu May 31 2018 09:43:25 GMT-0600 (MDT)
-[debug] [2018-05-31T15:43:25.209Z] ----------------------------------------------------------------------
+[debug] [2018-06-05T20:11:03.160Z] ----------------------------------------------------------------------
+[debug] [2018-06-05T20:11:03.162Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-06-05T20:11:03.162Z] CLI Version:   3.18.5
+[debug] [2018-06-05T20:11:03.162Z] Platform:      darwin
+[debug] [2018-06-05T20:11:03.162Z] Node Version:  v8.11.2
+[debug] [2018-06-05T20:11:03.164Z] Time:          Tue Jun 05 2018 14:11:03 GMT-0600 (MDT)
+[debug] [2018-06-05T20:11:03.165Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-05-31T15:43:25.236Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-05-31T15:43:25.237Z] > authorizing via signed-in user
-[debug] [2018-05-31T15:43:25.239Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-05-31T15:43:25.239Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2018-06-05T20:11:03.204Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-05T20:11:03.205Z] > authorizing via signed-in user
+[debug] [2018-06-05T20:11:03.207Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-06-05T20:11:03.207Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  { refresh_token: '1/X_3VERdB5C3PX5LKVQAvSKJ9DfVpqE21-36XEmJsByQ',
   client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
   client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
   grant_type: 'refresh_token',
   scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Thu May 31 2018 09:43:25 GMT-0600 (MDT)
-[debug] [2018-05-31T15:43:25.641Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-31T15:43:25.652Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/javascriptstudyprod  
+ Tue Jun 05 2018 14:11:03 GMT-0600 (MDT)
+[debug] [2018-06-05T20:11:03.748Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-05T20:11:03.755Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/javascriptstudyprod  
   
- Thu May 31 2018 09:43:25 GMT-0600 (MDT)
-[debug] [2018-05-31T15:43:26.309Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-31T15:43:26.312Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/javascriptstudyprod/tokens  
+ Tue Jun 05 2018 14:11:03 GMT-0600 (MDT)
+[debug] [2018-06-05T20:11:04.682Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-05T20:11:04.683Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/javascriptstudyprod/tokens  
   
- Thu May 31 2018 09:43:26 GMT-0600 (MDT)
-[debug] [2018-05-31T15:43:26.752Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-31T15:43:26.754Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/javascriptstudyprod  
+ Tue Jun 05 2018 14:11:04 GMT-0600 (MDT)
+[debug] [2018-06-05T20:11:05.124Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-05T20:11:05.125Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/javascriptstudyprod  
   
- Thu May 31 2018 09:43:26 GMT-0600 (MDT)
-[debug] [2018-05-31T15:43:27.295Z] <<< HTTP RESPONSE 200
+ Tue Jun 05 2018 14:11:05 GMT-0600 (MDT)
+[debug] [2018-06-05T20:11:05.912Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/nadkins/Documents/javascriptStudyProd/javascriptStudyProd'...
 [info] 
-[debug] [2018-05-31T15:43:27.299Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/562305102808/clients/_:getWebAppConfig  
+[debug] [2018-06-05T20:11:05.914Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/562305102808/clients/_:getWebAppConfig  
   
- Thu May 31 2018 09:43:27 GMT-0600 (MDT)
-[debug] [2018-05-31T15:43:27.901Z] <<< HTTP RESPONSE 200
-[info] i  hosting: Serving hosting files from: public
-[info] ✔  hosting: Local server: http://localhost:5000
-
-[debug] [2018-06-01T13:03:08.062Z] ----------------------------------------------------------------------
-[debug] [2018-06-01T13:03:08.064Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] [2018-06-01T13:03:08.064Z] CLI Version:   3.18.5
-[debug] [2018-06-01T13:03:08.064Z] Platform:      darwin
-[debug] [2018-06-01T13:03:08.064Z] Node Version:  v8.11.2
-[debug] [2018-06-01T13:03:08.069Z] Time:          Fri Jun 01 2018 07:03:08 GMT-0600 (MDT)
-[debug] [2018-06-01T13:03:08.070Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-06-01T13:03:08.099Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-06-01T13:03:08.099Z] > authorizing via signed-in user
-[debug] [2018-06-01T13:03:08.101Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-06-01T13:03:08.101Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- { refresh_token: '1/X_3VERdB5C3PX5LKVQAvSKJ9DfVpqE21-36XEmJsByQ',
-  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
-  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
-  grant_type: 'refresh_token',
-  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Fri Jun 01 2018 07:03:08 GMT-0600 (MDT)
-[debug] [2018-06-01T13:03:08.512Z] <<< HTTP RESPONSE 200
-[debug] [2018-06-01T13:03:08.524Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/javascriptstudyprod  
-  
- Fri Jun 01 2018 07:03:08 GMT-0600 (MDT)
-[debug] [2018-06-01T13:03:09.109Z] <<< HTTP RESPONSE 200
-[debug] [2018-06-01T13:03:09.110Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/javascriptstudyprod/tokens  
-  
- Fri Jun 01 2018 07:03:09 GMT-0600 (MDT)
-[debug] [2018-06-01T13:03:09.514Z] <<< HTTP RESPONSE 200
-[debug] [2018-06-01T13:03:09.515Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/javascriptstudyprod  
-  
- Fri Jun 01 2018 07:03:09 GMT-0600 (MDT)
-[debug] [2018-06-01T13:03:10.064Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from '/Users/nadkins/Documents/javascriptStudyProd/javascriptStudyProd'...
-[info] 
-[debug] [2018-06-01T13:03:10.066Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/562305102808/clients/_:getWebAppConfig  
-  
- Fri Jun 01 2018 07:03:10 GMT-0600 (MDT)
-[debug] [2018-06-01T13:03:10.810Z] <<< HTTP RESPONSE 200
-[info] i  hosting: Serving hosting files from: public
-[info] ✔  hosting: Local server: http://localhost:5000
-
-[debug] [2018-06-04T14:10:55.984Z] ----------------------------------------------------------------------
-[debug] [2018-06-04T14:10:55.988Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] [2018-06-04T14:10:55.988Z] CLI Version:   3.18.5
-[debug] [2018-06-04T14:10:55.988Z] Platform:      darwin
-[debug] [2018-06-04T14:10:55.988Z] Node Version:  v8.11.2
-[debug] [2018-06-04T14:10:55.989Z] Time:          Mon Jun 04 2018 08:10:55 GMT-0600 (MDT)
-[debug] [2018-06-04T14:10:55.989Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-06-04T14:10:56.032Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-06-04T14:10:56.032Z] > authorizing via signed-in user
-[debug] [2018-06-04T14:10:56.035Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-06-04T14:10:56.035Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- { refresh_token: '1/X_3VERdB5C3PX5LKVQAvSKJ9DfVpqE21-36XEmJsByQ',
-  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
-  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
-  grant_type: 'refresh_token',
-  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Mon Jun 04 2018 08:10:56 GMT-0600 (MDT)
-[debug] [2018-06-04T14:10:56.454Z] <<< HTTP RESPONSE 200
-[debug] [2018-06-04T14:10:56.471Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/javascriptstudyprod  
-  
- Mon Jun 04 2018 08:10:56 GMT-0600 (MDT)
-[debug] [2018-06-04T14:10:57.128Z] <<< HTTP RESPONSE 200
-[debug] [2018-06-04T14:10:57.130Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/javascriptstudyprod/tokens  
-  
- Mon Jun 04 2018 08:10:57 GMT-0600 (MDT)
-[debug] [2018-06-04T14:10:57.747Z] <<< HTTP RESPONSE 200
-[debug] [2018-06-04T14:10:57.748Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/javascriptstudyprod  
-  
- Mon Jun 04 2018 08:10:57 GMT-0600 (MDT)
-[debug] [2018-06-04T14:10:58.315Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from '/Users/nadkins/Documents/javascriptStudyProd/javascriptStudyProd'...
-[info] 
-[debug] [2018-06-04T14:10:58.318Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/562305102808/clients/_:getWebAppConfig  
-  
- Mon Jun 04 2018 08:10:58 GMT-0600 (MDT)
-[debug] [2018-06-04T14:10:58.894Z] <<< HTTP RESPONSE 200
+ Tue Jun 05 2018 14:11:05 GMT-0600 (MDT)
+[debug] [2018-06-05T20:11:06.730Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
 

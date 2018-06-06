@@ -32,12 +32,12 @@ saveProject.addEventListener("click", function() {
     });
     list.appendChild(newProject);
     projectList.appendChild(list).classList.add("card", "card-body");
-
+    $('#projectName').reset();
 });
 
 
 realTimeList = function () {
-    projectDB.get().then(function (querySnapshot) {
+    projectDB.orderBy("projectName", "asc").limit(3).get().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
             console.log(doc.id, " ", doc.data());
             const myData = doc.data();
@@ -51,43 +51,7 @@ realTimeList = function () {
     });
 }
 
-    realTimeList();
-
-
-
-// realTimeList = function() {
-//     projectDB.doc("7FWw2tjET9C0hlEKXLwV").onSnapshot(function (doc) {
-//         if (doc && doc.exists) {
-//             const myData = doc.data();
-//             projectList.innerText = "Project list: " + myData.projectName;
-//         }
-//     });
-//     }
-
-// realTimeList = function() {
-//     projectDB.get().then(function(querySnapshot) {
-//         querySnapshot.forEach(function (doc) {
-//             console.log(doc.id, " ", doc.data());
-//                 if (doc && doc.exists) {
-//                     const myData = doc.data();
-//                     projectList.innerText = "Project list: " + JSON.stringify(myData.projectName);
-//                 }else{
-//                     projectList.innerText = "No Projects"
-//                 }
-//         });
-//     }).catch(function(error) {
-//         console.log("error: ", error);
-//     });
-// }
-
-// projectDB.where("project", ">", 0).onSnapshot(function (querySnapshot) {
-//     var projects = [];
-//     querySnapshot.forEach(function (doc) {
-//         projects.push(doc.data().projectName);
-//     });
-//     console.log("All Projects: ", projects.join(", "));
-    
-// });
+realTimeList();
 
 
 

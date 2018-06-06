@@ -18,30 +18,23 @@ const projectDB = firestore.collection("project");
 const projectList = document.querySelector("#projectList");
 const projectName = document.querySelector("#projectName");
 const saveProject = document.querySelector("#saveProject");
-const loadProject = document.querySelector("#loadProject");
 
 
 saveProject.addEventListener("click", function() {
     const savedProject = projectName.value;
+    const list = document.createElement("LI");
+    const newProject = document.createTextNode(JSON.stringify(savedProject));
     console.log("Project turned in: ", savedProject);
     projectDB.add({
         projectName: savedProject
     }).catch(function(error) {
         console.error("Error adding:", error)
-    })
-
-});
-
-loadProject.addEventListener("click", function(){
-    projectDB.doc("DxWRXmUzqt7lcNor2J4x").get().then(function (doc) {
-        if (doc && doc.exists) {
-            const myData = doc.data();
-            projectList.innerText = "Project list: " + myData.projectName;
-        }
-    }).catch(function (error) {
-        console.error("Error loading:", error)
     });
+    list.appendChild(newProject);
+    projectList.appendChild(list).classList.add("card", "card-body");
+
 });
+
 
 realTimeList = function () {
     projectDB.get().then(function (querySnapshot) {

@@ -27,11 +27,20 @@
         </div>
       </nav>
       <div class="container">
-        <div class="mb-4">
-        <h3>New Project Ideas</h3>
-        <input id="projectName" type="text">
-        <button id="saveProject" class="btn btn-primary btn-sm">Enter Project</button>
+        <form action="" class="mb-4">
+          <h3>New Project Ideas</h3>
+          <div class="form-group mb-4">           
+            <input class="form-control" id="projectName" type="text" placeholder="Project Name">
+          </div>
+          <div class="form-group mb-4">
+            <input class="form-control" id="projectCreationDate" type="text" placeholder="Date">
+          </div>
+          <div class="form-group mb-4">
+            <input class="form-control" id="projectCreator" type="text" placeholder="Creator's Name">
+          </div>
+            <button id="saveProject" class="btn btn-primary btn-sm">Enter Project</button>
         </div>
+        </form>
         <ul id="projectList">
         </ul>
       </div>

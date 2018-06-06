@@ -32,7 +32,7 @@ saveProject.addEventListener("click", function() {
     });
     list.appendChild(newProject);
     projectList.appendChild(list).classList.add("card", "card-body");
-    $('#projectName').reset();
+    document.getElementById('projectName').value = "";
 });
 
 

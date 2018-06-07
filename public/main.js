@@ -16,28 +16,38 @@ var firestore = firebase.firestore();
 
 const projectDB = firestore.collection("project");
 const projectList = document.querySelector("#projectList");
+const projectCreationDate = document.querySelector("#projectCreationDate");
+const projectCreator = document.querySelector("#projectCreator");
 const projectName = document.querySelector("#projectName");
 const saveProject = document.querySelector("#saveProject");
 
+const projectDetails = [
+    projectList,
+    projectCreationDate,
+    projectCreator
+]
+
 
 saveProject.addEventListener("click", function() {
-    const savedProject = projectName.value;
+    const savedProject = projectDetails.value;
     const list = document.createElement("LI");
     const newProject = document.createTextNode(JSON.stringify(savedProject));
     console.log("Project turned in: ", savedProject);
     projectDB.add({
-        projectName: savedProject
+        projectDetails: savedProject
     }).catch(function(error) {
         console.error("Error adding:", error)
     });
     list.appendChild(newProject);
     projectList.appendChild(list).classList.add("card", "card-body");
     document.getElementById('projectName').value = "";
+    document.getElementById('projectCreationDate').value = "";
+    document.getElementById('projectCreator').value = "";
 });
 
 
 realTimeList = function () {
-    projectDB.orderBy("projectName", "asc").limit(3).get().then(function (querySnapshot) {
+    projectDB.orderBy("projectName", "asc").where(projectName).get().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
             console.log(doc.id, " ", doc.data());
             const myData = doc.data();

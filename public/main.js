@@ -53,6 +53,24 @@ realTimeList = function () {
 
 realTimeList();
 
+getSelectValue = function () {
+    var selectedValue = document.getElementById("dropDown").value;
+    console.log(selectedValue);
+    projectDB.orderBy("projectName", "asc").where("projectName", ">=", selectedValue).get().then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+            console.log(doc.id, " ", doc.data());
+            const myData = doc.data();
+            const list = document.createElement("LI");
+            const newProject = document.createTextNode(JSON.stringify(myData.projectName));
+            list.appendChild(newProject);
+            projectList.appendChild(list).classList.add("card", "card-body");
+        });
+    }).catch(function (error) {
+        console.log("error: ", error);
+    });
+};
+
+
 
 
 

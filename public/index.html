@@ -30,13 +30,21 @@
         <form action="" class="mb-4">
           <h3>New Project Ideas</h3>
           <div class="form-group mb-4">           
-            <input class="form-control" id="projectName" type="text" placeholder="Project Name" required>
+            <input class="form-control" id="projectName" type="text" placeholder="Project Name" >
           </div>
             <button id="saveProject" class="btn btn-primary btn-sm">Enter Project</button>
         </div>
         </form>
+        <div class="container">
+          <select name="" id="dropDown" class="mb-4" onchange="getSelectValue();">
+            <option value="new">new</option>
+            <option value="bibi">bibi</option>
+            <option value="javaScriptProd">javaScriptProd</option>
+          </select>
+        </div>
         <ul id="projectList">
         </ul>
+      </div>
       </div>
     </div>
     

@@ -26,7 +26,7 @@ saveProject.addEventListener("click", function() {
     const newProject = document.createTextNode(JSON.stringify(savedProject));
     console.log("Project turned in: ", savedProject);
     projectDB.add({
-        projectDetails: savedProject
+        projectName: savedProject
     }).catch(function(error) {
         console.error("Error adding:", error)
     });
@@ -37,9 +37,10 @@ saveProject.addEventListener("click", function() {
 
 
 realTimeList = function () {
+    document.getElementById("projectList").innerHTML = "";
     var selectedValue = document.getElementById("dropDown").value;
     console.log(selectedValue);
-    projectDB.orderBy("projectName", "asc").where("projectName", ">=", selectedValue).get().then(function (querySnapshot) {
+    projectDB.where("projectName", "==", selectedValue).get().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
             console.log(doc.id, " ", doc.data());
             const myData = doc.data();
@@ -48,6 +49,7 @@ realTimeList = function () {
             list.appendChild(newProject);
             projectList.appendChild(list).classList.add("card", "card-body");
         });
+        
     }).catch(function (error) {
         console.log("error: ", error);
     });

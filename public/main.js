@@ -26,18 +26,18 @@ saveProject.addEventListener("click", function() {
     const newProject = document.createTextNode(JSON.stringify(savedProject));
     console.log("Project turned in: ", savedProject);
     projectDB.add({
-        projectName: savedProject
+        projectDetails: savedProject
     }).catch(function(error) {
         console.error("Error adding:", error)
     });
     list.appendChild(newProject);
     projectList.appendChild(list).classList.add("card", "card-body");
-    $('#projectName').reset();
+    document.getElementById('projectName').value = "";
 });
 
 
 realTimeList = function () {
-    projectDB.orderBy("projectName", "asc").limit(3).get().then(function (querySnapshot) {
+    projectDB.orderBy("projectName", "asc").get().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
             console.log(doc.id, " ", doc.data());
             const myData = doc.data();
